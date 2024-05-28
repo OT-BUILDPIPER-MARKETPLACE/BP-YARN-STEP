@@ -16,7 +16,7 @@ docker build -t ot/yarn:1.0 .
 * Do local testing via image only
 ```
 # install the dependencies  code with default settings 
-docker run -it --rm -v $PWD:/src -e WORKSPACE=src -e CODEBASE_DIR=traya-form-v2 -e INSTRUCTION=install   ot/yarn:1.0
+docker run -it --rm -v $PWD:/src -e WORKSPACE=src -e CODEBASE_DIR=. -e INSTRUCTION=install   ot/yarn:1.0
 
 # to build the code
 docker run -it --rm -v $PWD:/src -e WORKSPACE=src -e CODEBASE_DIR=. -e INSTRUCTION=build   ot/yarn:1.0
