@@ -10,14 +10,15 @@ I'll use maven to build the java project
 ```
 git submodule init
 git submodule update
-docker build -t ot/mvn-execute-step:0.2 .
+docker build -t ot/yarn:1.0 .
 ```
 
 * Do local testing via image only
 ```
-# Build code with default settings 
-docker run -it --rm -v $PWD:/src -e WORKSPACE=/src -e CODEBASE_DIR=/ ot/mvn-execute-step:0.2
+# install the dependencies  code with default settings 
+docker run -it --rm -v $PWD:/src -e WORKSPACE=src -e CODEBASE_DIR=traya-form-v2 -e INSTRUCTION=install   ot/yarn:1.0
 
-# Only compile the code
-docker run -it --rm -v $PWD:/src -e WORKSPACE=/src -e CODEBASE_DIR=/ -e INSTRUCTION=compile ot/mvn-execute-step:0.2
+# to build the code
+docker run -it --rm -v $PWD:/src -e WORKSPACE=src -e CODEBASE_DIR=. -e INSTRUCTION=build   ot/yarn:1.0
+
 ```
