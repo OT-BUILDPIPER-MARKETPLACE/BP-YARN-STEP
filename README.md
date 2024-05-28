@@ -1,10 +1,10 @@
-# BP-MAVEN-STEP
+# BP-YARN-STEP
 
-I'll use maven to build the java project
+I'll use yarn  to install and build the nodejs project
 
 
 ## Setup
-* Clone the code available at [BP-MAVEN-STEP](https://github.com/OT-BUILDPIPER-MARKETPLACE/BP-MAVEN-STEP)
+* Clone the code available at [BP-YARN-STEP](https://github.com/OT-BUILDPIPER-MARKETPLACE/BP-YARN-STEP)
 * Build the docker image
 
 ```
